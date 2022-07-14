@@ -8,9 +8,21 @@
     background-color: #eee;
     margin: auto;
     transition: width 500ms;
+    border-radius: 8px;
 }
 
-.controls, .log {
+.specialbar {
+    width: 80%;
+    height: 40px;
+    background-color: #eee;
+    margin: auto;
+    transition: width 500ms;
+    margin-top: 10px;
+    border-radius: 8px;
+}
+
+.controls,
+.log {
     margin-top: 30px;
     text-align: center;
     padding: 10px;
