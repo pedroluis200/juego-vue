@@ -1,7 +1,7 @@
 new Vue({
     el: "#app",
     data: {
-        playerHealth: 100,
+        playerHealth: 600,
         playerSpecial: 0,
         monsterHealth: 1000,
         gameStarted: false,
@@ -9,10 +9,10 @@ new Vue({
     },
     methods: {
         startGame() {
-            this.playerHealth = 100;
-            this.monsterHealth = 100;
-            this.playerSpecial = 0,
-                this.gameStarted = true;
+            this.playerHealth = 600;
+            this.monsterHealth = 1000;
+            this.playerSpecial = 0;
+            this.gameStarted = true;
             this.turns = [];
         },
         calculateDamage: function(min, max) {
@@ -49,6 +49,7 @@ new Vue({
         monsterAttack() {
             const damage = this.calculateDamage(30, 50);
             this.playerHealth -= damage;
+            this.playerSpecial += damage;
             this.logBattle(false, "El oponente ataca al jugador por " + damage);
         },
         notify(message) {

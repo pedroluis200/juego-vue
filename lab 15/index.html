@@ -13,14 +13,14 @@
         <section class="row">
             <!-- Aqui va la seccion con las barras de vida-->
             <div class="small-6 columns">
-                <h1 class="text-center">Jugador</h1>
+                <h1 class="text-center">Berserker</h1>
                 <div class="healthbar">
-                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white" :style="{width: playerHealth + '%'}">
+                    <div class="healthbar bar text-center" style="background-color: green; margin: 0; color: white" :style="{width: playerHealth * 100 / 600 + '%'}">
                         {{ playerHealth }}
                     </div>
                 </div>
                 <div class="specialbar">
-                    <div class="specialbar text-center" style="background-color: rgb(219, 86, 49); margin: 0; color: white" :style="{width: playerSpecial + '%'}">
+                    <div class="specialbar bar text-center" style="background-color: rgb(219, 86, 49); margin: 0; color: white" :style="{width: playerSpecial * 100 / 1000 + '%'}">
                         {{ playerSpecial != 0 ? playerSpecial : ''}}
                     </div>
                 </div>
@@ -28,7 +28,7 @@
             <div class="small-6 columns">
                 <h1 class="text-center">Oponente</h1>
                 <div class="healthbar">
-                    <div class="healthbar text-center" style="background-color: green; margin: 0; color: white" :style="{width: playerHealth + '%'}">
+                    <div class="healthbar bar text-center" style="background-color: green; margin: 0; color: white" :style="{width: monsterHealth * 100 / 1000 + '%'}">
                         {{ monsterHealth }}
                     </div>
                 </div>

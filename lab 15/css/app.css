@@ -11,6 +11,10 @@
     border-radius: 8px;
 }
 
+.bar {
+    max-width: 100%;
+}
+
 .specialbar {
     width: 80%;
     height: 40px;
