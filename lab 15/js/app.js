@@ -4,6 +4,8 @@ new Vue({
         playerHealth: 600,
         playerSpecial: 0,
         monsterHealth: 1000,
+        monsterLoosedLife: 0,
+        maxAttack: 50,
         gameStarted: false,
         turns: [],
     },
@@ -13,13 +15,15 @@ new Vue({
             this.monsterHealth = 1000;
             this.playerSpecial = 0;
             this.gameStarted = true;
+            this.monsterLoosedLife = 0;
+            this.maxAttack = 10;
             this.turns = [];
         },
         calculateDamage: function(min, max) {
             return Math.max(Math.floor(Math.random() * max) + 1, min);
         },
         attack() {
-            const damage = this.calculateDamage(30, 50);
+            const damage = this.calculateDamage(3, this.maxAttack);
             this.monsterHealth -= damage;
             this.logBattle(true, "El jugador ataca al oponente por " + damage);
             this.monsterAttack();
@@ -73,6 +77,7 @@ new Vue({
             }
         },
         monsterHealth(newValue) {
+            this.maxAttack += (1000 - newValue) / 8;
             if (newValue <= 0) {
                 this.notify("¡Has Ganado!");
             }
