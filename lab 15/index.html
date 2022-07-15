@@ -15,20 +15,20 @@
             <div class="small-6 columns">
                 <h1 class="text-center">Berserker</h1>
                 <div class="healthbar">
-                    <div class="healthbar bar text-center" style="background-color: green; margin: 0; color: white" :style="{width: playerHealth * 100 / 600 + '%'}">
+                    <div class="healthbar barra text-center" style="background-color: green; margin: 0; color: white" :style="{width: playerHealth + '%'}">
                         {{ playerHealth }}
                     </div>
                 </div>
                 <div class="specialbar">
-                    <div class="specialbar bar text-center" style="background-color: rgb(219, 86, 49); margin: 0; color: white" :style="{width: playerSpecial * 100 / 1000 + '%'}">
-                        {{ playerSpecial != 0 ? playerSpecial : ''}}
+                    <div class="specialbar barra text-center" style="background-color: rgb(39, 142, 211); margin: 0; color: white" :style="{width: barraEspecial + '%'}">
+                        {{ barraEspecial }}
                     </div>
                 </div>
             </div>
             <div class="small-6 columns">
                 <h1 class="text-center">Oponente</h1>
                 <div class="healthbar">
-                    <div class="healthbar bar text-center" style="background-color: green; margin: 0; color: white" :style="{width: monsterHealth * 100 / 1000 + '%'}">
+                    <div class="healthbar barra text-center" style="background-color: green; margin: 0; color: white" :style="{width: monsterHealth + '%'}">
                         {{ monsterHealth }}
                     </div>
                 </div>
