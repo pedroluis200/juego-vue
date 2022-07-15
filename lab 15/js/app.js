@@ -41,13 +41,13 @@ new Vue({
       }
     },
     heal() {
-      if (this.playerHealth <= 90) {
-        this.playerHealth += 10;
+      if (this.playerSpecial > 100) {
+        this.playerSpecial -= 100;
+        this.playerHealth += 125;
+        this.logBattle(true, "El jugador recupera 125 puntos de salud");
       } else {
-        this.playerHealth = 100;
+        this.logBattle(true, "El jugador necesita mas energia para curarse");
       }
-      this.logBattle(true, "El jugador recupera 10 puntos de salud");
-      this.monsterAttack();
     },
     giveUp() {
       this.logBattle(true, "El jugador escapa de la batalla");
