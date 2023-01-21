@@ -1,4 +1,4 @@
 # Juego-VUE
-Jueguito desarrollado en javascript con Vue para el disfrute de todos desde la Web
+Jueguito desarrollado en javascript con el framework Vue para el disfrute de todos desde una simple página Web
 
 # Espero disfruten 😁
